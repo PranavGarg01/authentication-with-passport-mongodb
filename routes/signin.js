@@ -8,7 +8,9 @@ const   express     = require('express'),
 router.get('/signin',(req,res)=>{
     res.render('signin');
 });
-router.post('/signin',passport.authenticate('local'),(req,res)=>{
+router.post('/signin',passport.authenticate('local',{
+    failureRedirect: "/signin"
+}),(req,res)=>{
     res.redirect('/home')
 });
 module.exports = router;
