@@ -1,0 +1,10 @@
+<%- include("./partials/header"); %>
+<div class="d-flex align-items-center vh-100">
+    <div class="container mycard text-center">
+        
+        <div class="h3">Username : <%= user.username %></div>
+        <br>
+        <button type="button" onclick="window.location.href='/home/logout'" class="btn btn-primary btn-md hm-btn">LogOut</button>
+    </div>
+</div>
+<%- include("./partials/footer"); %>
