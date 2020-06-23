@@ -1,0 +1,14 @@
+<%- include("partials/header") %> 
+
+<div class="d-flex align-items-center vh-100">
+<div class="container mycard text-center">
+    <button type="button" onclick="refresh()" class="btn btn-primary btn-lg hm-btn">Refresh</button>
+    <ul class="list-group list-group-flush" id="users">
+        <li class="list-group-item"><h3>Users</h3></li>
+        
+      </ul>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="./js/script.js"></script>
+<%- include("partials/footer") %>

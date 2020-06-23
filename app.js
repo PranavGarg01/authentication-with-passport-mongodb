@@ -9,8 +9,8 @@ const   express         = require('express'),
 const 	signin		= require('./routes/signin'),
 		register	= require('./routes/register'),
 		index		= require('./routes/index'),
-		home		= require('./routes/home');
-
+		home		= require('./routes/home'),
+		admin		= require('./routes/admin');
 mongoose.connect("mongodb://127.0.0.1:27017/mydb")
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -31,6 +31,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(signin);
 app.use(register);
 app.use(home);
+app.use(admin);
 app.use(index);
 
 app.listen("3000",()=>{
